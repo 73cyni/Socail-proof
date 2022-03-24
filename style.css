@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+:root {
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    border: none;
+    font-family: 'Spartan', sans-serif;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    /* border: 1px solid #000; */
+    width: 100rem;
+    padding: 6rem 9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.main > img[src*="mobile"] {
+    display: none;
+}
+
+.main > img[src*="top-desktop"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.main > img[src*="bottom-desktop"] {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.top {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    padding-bottom: 3rem;
+}
+
+.top .text {
+    flex: 1 1 50%;
+}
+    .top .text h1 {
+        color: var(--Very-Dark-Magenta);
+        width: 27rem;
+        font-size: 3.2rem;
+    }
+    .top .text p {
+        font-weight: 500;
+        width: 80%;
+        padding: 1rem 0;
+        line-height: 1.5rem;
+        color: var(--Dark-Grayish-Magenta);
+    }
+
+.top .rating {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+    .top .rating .item {
+        width: 30rem;
+        display: flex;
+        align-items: center;
+        background-color: var(--Light-Grayish-Magenta);
+        border-radius: 7px;
+        padding: 1rem 2rem;
+        margin-top: 1rem;
+    }
+    .top .rating .item h2 {
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--Very-Dark-Magenta);
+        margin-left: 2.5rem;
+    }
+    .top .rating .it-2 {
+        margin-right: 3.5rem;
+    }
+    .top .rating .it-1 {
+        margin-right: 7rem;
+    }
+
+.bottom {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+}
+    .bottom .review {
+        height: fit-content;
+        background-color: var(--Very-Dark-Magenta);
+        padding: 3rem 2rem;
+        width: 26rem;
+        border-radius: 10px;
+    }
+    .bottom .review .person {
+        display: flex;
+        align-items: center;
+    }
+    .bottom .review .person img {
+        border-radius: 50%;
+        width: 3rem;
+    }
+    .bottom .review .person h2 {
+        color: var(--Light-Grayish-Magenta);
+        font-size: 1rem;
+    }
+    .bottom .review .person h3 {
+        font-size: 1rem;
+        color:var(--Soft-Pink);
+        opacity: 0.5;
+        font-weight: 500;
+        margin-top: 0.3rem;
+    }
+    .bottom .review .person div {
+        margin-left: 1.7rem;
+    }
+    .bottom .review p {
+        color: var(--Light-Grayish-Magenta);
+        margin-top: 2.5rem;
+        line-height: 1.7rem;
+    }
+    .bottom .rv-2 {
+        margin-top: 1.5rem;
+    }
+    .bottom .rv-3 {
+        margin-top: 3rem;
+    }
+
+@media screen and (max-width:1024px) {
+    body {
+        height: auto;
+    }
+    .main > img[src*="mobile"] {
+        display: block;
+    }
+    .main > img[src*="desktop"] {
+        display: none;
+    }
+    .main > img[src*="top-mobile"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .main > img[src*="bottom-mobile"] {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .main {
+        width: 350px;
+        padding: 5rem 0;
+    }
+    .top .text h1 {
+        margin: auto;
+        width: 90%;
+        font-size: 2rem;
+        text-align: center;
+    }
+    .top .text p {
+        padding-top: 2rem;
+        width: 100%;
+        text-align: center;
+    }
+    .top {
+        flex-direction: column;
+    }
+    .top .text {
+        width: 100%;
+    }
+    .top .rating {
+        width: 100%;
+    }
+    .top .rating .it-1 , .top .rating .it-2 {
+        margin-right: 0;
+    }
+    .top .rating .star {
+        /* border: 1px solid #000; */
+        width: 8rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    .top .rating .item {
+        width: 100%;
+        flex-direction: column;
+    }
+    .top .rating .item h2 {
+        margin-top: 1rem;
+        margin-left: 0;
+        font-size: 0.9rem;
+    }
+    .bottom {
+        flex-direction: column;
+    }
+    .bottom .review {
+        width: 100%;
+    }
+    .bottom .rv-3 {
+        margin-top: 1.5rem;
+    }
+}
+
